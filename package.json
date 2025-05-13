@@ -2,15 +2,27 @@
   "name": "cpan212-c",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module", 
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Anmol Jaswal\r Student Number: N01720781",
   "dependencies": {
+    "dayjs": "^1.11.13",
     "lodash": "^4.17.21"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anmol108d/CPAN212-C.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Anmol108d/CPAN212-C/issues"
+  },
+  "homepage": "https://github.com/Anmol108d/CPAN212-C#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
