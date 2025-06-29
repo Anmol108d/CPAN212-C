@@ -1,0 +1,26 @@
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+
+export default function Home() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios.get('/api/products').then(res => setProducts(res.data));
+  }, []);
+
+  return (
+    <div>
+      <h1 className="text-2xl font-bold mb-4">Featured Products</h1>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {products.map(p => (
+          <Link to={`/products/${p.id}`} key={p.id} className="border p-2 hover:shadow">
+            <img src={p.image} alt={p.name} className="w-full h-32 object-cover mb-2" />
+            <div className="font-semibold">{p.name}</div>
+            <div>${p.price.toFixed(2)}</div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
